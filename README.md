@@ -3,10 +3,14 @@ Baseando-se no [Figma](https://www.figma.com/design/1zm3NNIw4KcI0RQtR6UmqK/New-A
 ## Funcionalidades
 
 - [x] Simulação de API com json-server
-- [x] CRUD em requisições GET para busca de dados no banco de dados da API, requisições POST para envio e salvamento de dados e exclusão de produtos com DELETE.
+- [x] CRUD em requisições GET para
+  - [x] busca de dados no banco de dados da API
+  - [x] requisições POST para envio e salvamento de dados
+  - [x] exclusão de produtos com DELETE.
 - [x] Validação de campos do formulário.
 - [x] Uso de recursos de assingcronismo do Javascript.
 - [x] Deploy no [Vercel](https://vercel.com/) em https://one-alurageek.vercel.app/
+  - https://github.com/kitloong/json-server-vercel funciona apenas com GET
 
 ## Imagens
 
