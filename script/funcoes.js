@@ -1,7 +1,7 @@
-const porta = 3001;
+const url = "https://json-server-vercel-alurageek.vercel.app/produtos";
 
 export async function pegaProdutos() {
-    const dados = await fetch(`http://localhost:${porta}/produtos`);
+    const dados = await fetch(url);
     const json = await dados.json();
     return json;
 }
@@ -46,7 +46,7 @@ function adicionaEventosDeletar() {
 
 export async function deletaProduto(id) {
     try {
-        const response = await fetch(`http://localhost:${porta}/produtos/${id}`, {
+        const response = await fetch(`${url}/${id}`, {
             method: 'DELETE',
         });
         if (response.ok) {
@@ -61,7 +61,7 @@ export async function deletaProduto(id) {
 }
 
 function insereProdutos(nome, valor, imagem) {
-    fetch(`http://localhost:${porta}/produtos`, {
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
