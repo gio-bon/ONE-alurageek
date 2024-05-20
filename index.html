@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <script src="script/main.js" type="module" defer></script>
+    <title>AluraGeek</title>
+</head>
+<body>
+        <header>
+            <div class="container-header">
+                <div class="header__title">
+                    <img id="header__logo" src="Assets/geek-logo.png" alt="Logo AluraGeek">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container-main">
+                <section class="main__products">
+                    <h1 id="tit-prod">Meus Produtos</h1>
+                    <div id="img-empty"></div>
+                    <div id="products__render">
+                            <!-- PRODUTOS AQUI -->
+                    </div>
+                </section>
+
+                <section class="main__formadd">
+                    <h1>Adicionar Produto</h1>
+                    <form id="form-add" method="POST">
+                        <input type="text" placeholder="Nome" id="form-nome" name="name" required data-nome>
+                        <input type="text" inputmode="decimal" placeholder="Valor" id="form-valor" name="valor" required data-valor>
+                        <input type="text" placeholder="URL da imagem" id="form-imagem" name="imagem" required data-imagem>
+                        <div class="formadd__buttons">
+                            <button class="btn-submit" type="submit">Adicionar</button>
+                            <button class="btn-reset" type="reset">Limpar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container-footer">
+                <div class="footer__main">
+                    <img id="footer__logo" src="Assets/geek-logo.png" alt="Logo AluraGeek">
+                    <h2>Desenvolvido por Giovani Bontempo.</h2>
+                    <p>Programa ONE 2024</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

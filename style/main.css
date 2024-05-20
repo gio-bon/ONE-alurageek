@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /* https://fonts.google.com/specimen/Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); /* https://fonts.google.com/specimen/Bangers */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root{
+    --title-font: 'Bangers', system-ui;
+    --main-font: 'Oswald', sans-serif;
+    --purple: #262161;
+    --yellow: #F4E513;
+    --blue: #4784C6;
+    --blue-claro: #9abee6;
+    --green: #53AC63;
+    --red: #be0f0f;
+    --gray: #3B3A38;
+    --white: #CCCBD3;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--title-font);
+    color: var(--gray);
+}
+
+p{
+    font-family: var(--main-font);
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, var(--blue), var(--blue-claro));
+    font-family: var(--main-font);
+}
+
+/* HEADER */
+.container-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--gray);
+}
+
+.header__title{
+    height: 106px;
+}
+
+#header__logo{
+    height: 70%;
+    padding-top:20px;
+}
+
+/* 
+FOOTER
+vai fixar footer no rodape */
+footer {
+    width: 100%;
+    height: 140px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    align-items: center;
+    height: 232px;
+    background-color: transparent;
+    height: 100%;
+}
+
+.footer__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer__main h2, p{
+    margin: 10px;
+    font-size: medium;
+    font-family: var(--title-font);
+    line-height: 0.7;
+}
+
+#footer__logo{
+    height: 36px;
+    padding: 10px;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;  /* Faz o main crescer para ocupar o espaço disponível */
+}
+
+.container-main{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main__products{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 758px;
+    min-width: 758px;
+    padding: 20px;
+    height: 68vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#products__render{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    gap: 16px; /* Adiciona espaço entre os itens */
+}
+
+.main__formadd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 472px;
+    padding: 20px;
+}
+
+.formadd__buttons{
+    display: flex;
+    gap: 20px
+}
+
+.main__formadd form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main__products, 
+.main__formadd{
+    margin-top: 20px;
+}
+
+.product__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 196px;
+    min-height: 258px;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    border: var(--gray) solid 5px;
+    max-height: 50vh;
+}
+
+.product__card img{
+    width: 176px;
+    max-height: 140px;
+    border-radius: 5px;
+}
+
+.product__title{
+    text-align: center;
+    padding: 5px;
+}
+
+.card__text{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    width: 100%;
+    gap: 35px;
+}
+
+.product__price{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.product__price{
+    text-align: center;
+    margin: 0;
+}
+
+.product__card img, h2, p{
+    margin: 0;
+}
+
+.card__text{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.form__error{
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+
+.form__error::before{
+    content: '⚠️';
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.btn-submit, .btn-reset{
+    border:none;
+    background-color: var(--yellow);
+    font-family: var(--title-font);
+    color: var(--gray);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-submit:hover, 
+.btn-reset:hover{
+    color: var(--red);
+    transition: 0.5s;
+}
+
+button{
+    background-color: transparent;
+    border: transparent;
+}
+
+#img-empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#sem-produtos{
+    width: 450px;
+}
+
+/* FORMULÁRIO */
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    color: var(--gray);
+    background-color: var(--white);   
+}
+
+input:focus {
+    border: 1px solid var(--red);
+    border-radius: 15px;
+    outline: none;
+    transition: 0.5s;
+}
+
+/* input[type="number"] {
+    width: 150px;
+} */
+
+@media (max-width: 768px) {
+
+    .container-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main__products{
+        margin-top: 0;
+        padding-top: 0;
+        width: 200px;
+        padding: 20px;
+        order: 2;
+    }
+
+    .main__formadd{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        max-width: 705px;
+        order: 1;
+    }
+}
